@@ -170,17 +170,6 @@ function generateIntern() {
         .then((answer) => {
             let managerAnswer = new Manager(answer.name, answer.id, answer.email, answer.officeNumber);
             team.push(managerAnswer);
-            HTML += `
-                <div class="card container m-3" style="width: 18rem;">
-                <div class="card-header bg-primary row" style="color: whitesmoke; height: 100px;">
-                    <h3>${answer.name} ${answer.job}</h3>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: ${answer.id}</li>
-                    <li class="list-group-item">Email: ${answer.email}</li>
-                    <li class="list-group-item">Office Number: ${answer.officeNumber}</li>
-                </ul>
-            </div>`
             addEmployee();
         });
 
